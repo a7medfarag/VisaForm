@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/eventLogo.png" type="image/x-icon">
+    <title>Welcome</title>
+</head>
+
+<body>
+
+
+
+    <section id="login" class="login">
+        <div class="logo">
+            <img src="./assets/images/logo.svg" alt="" class="img-fluid">
+        </div>
+        <div class="eventLogo">
+            <img src="./assets/images/eventLogo.png" alt="" class="img-fluid">
+        </div>
+        <div class="loginContainer">
+
+            <form>
+                <div class="mb-4">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="email">
+                    <div id="emailError" class="emailRrror">
+                        Your Email is required
+                    </div>
+                    <div id="invalidEmail" class="emailRrror">
+                        Your Email is required
+                    </div>
+                    <div id="notfound" class="emailRrror">
+                        Your Email isn't exist please register first
+                    </div>
+                </div>
+                <button id="submitBtn" type="button" class="btn">Submit</button>
+            </form>
+            <p class="disc" style="margin:0;">
+                VISA Requirements:
+            <ul>
+                <li>
+                    If You Are Eligible for an E-Visa or VISA On Arrival, We Will Get It for You.
+                </li>
+                <li>
+                    If Not, You Have to Apply through the Azerbaijan Embassy.
+                </li>
+            </ul>
+            </p class="disc" style="margin:0;">
+            <p>
+                <a href="https://pdfhost.io/v/WaNoQz~bJ_VISA_Requirements" target="_blank">Click here</a> to check your
+                Eligibility:
+            </p>
+        </div>
+    </section>
+
+    <section id="thankYou" class="thank">
+        <div class="logo">
+            <img src="./assets/images/logo.svg" alt="" class="img-fluid">
+        </div>
+        <div class="loginContainer">
+            <p class="thankText">
+                Thank You For Your Participation
+            </p>
+        </div>
+    </section>
+    <section id="exportSec" class="thank">
+        <div class="logo">
+            <img src="./assets/images/logo.svg" alt="" class="img-fluid">
+        </div>
+        <div class="loginContainer">
+            <button class="btn" type="button" onclick="exportFile()">Export Data</button>
+        </div>
+    </section>
+    <section id="sizesPopup" class="thank">
+        <div class="logo">
+            <img src="./assets/images/logo.svg" alt="" class="img-fluid">
+        </div>
+        <div class="loginContainer">
+            <div class="sizesImg">
+                <img src="./assets/images/sizes.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+    </section>
+    <section id="pssPhoto" class="thank">
+        <div class="logo">
+            <img src="./assets/images/logo.svg" alt="" class="img-fluid">
+        </div>
+        <div class="viseContainer">
+            <div class="viseImg">
+                <img src="./assets/images/vise.jpg" alt="" class="img-fluid">
+            </div>
+        </div>
+    </section>
+    <section id="register" class="register">
+        <div class="logo">
+            <img src="./assets/images/logo.svg" alt="" class="img-fluid">
+        </div>
+        <div class="registerContainer">
+            <form id="regForm">
+                <div class="w-100 inputParent">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="fname" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Middle Name</label>
+                        <input type="text" class="form-control" id="mname">
+                    </div>
+                </div>
+                <div class="w-100 inputParent">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lname">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Date Of Birth</label>
+                        <input type="date" class="form-control" id="dobirth">
+                    </div>
+                </div>
+                <div class="w-100 inputParent">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Nationality</label>
+                        <input type="text" class="form-control" id="nationality">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Country Of Residence</label>
+                        <select type="text" class="form-control" id="country">
+                                <option>Afghanistan</option>
+                                <option>Albania</option>
+                                <option>Algeria</option>
+                                <option>Andorra</option>
+                                <option>Angola</option>
+                                <option>Antigua and Barbuda</option>
+                                <option>Argentina</option>
+                                <option>Armenia</option>
+                                <option>Austria</option>
+                                <option>Azerbaijan</option>
+                                <option>Bahrain</option>
+                                <option>Bangladesh</option>
+                                <option>Barbados</option>
+                                <option>Belarus</option>
+                                <option>Belgium</option>
+                                <option>Belize</option>
+                                <option>Benin</option>
+                                <option>Bhutan</option>
+                                <option>Bolivia</option>
+                                <option>Bosnia and Herzegovina</option>
+                                <option>Botswana</option>
+                                <option>Brazi</option>l
+                                <option>Brunei</option>
+                                <option>Bulgaria</option>
+                                <option>Burkina Faso</option>
+                                <option>Burundi</option>
+                                <option>Cabo Verde</option>
+                                <option>Cambodia</option>
+                                <option>Cameroon</option>
+                                <option>Canada</option>
+                                <option>Central African Republic</option>
+                                <option>Chad</option>
+                                <option>Channel Islands</option>
+                                <option>Chile</option>
+                                <option>China</option>
+                                <option>Colombia</option>
+                                <option>Comoros</option>
+                                <option>Congo</option>
+                                <option>Costa Rica</option>
+                                <option>Côte d'Ivoire</option>
+                                <option>Croatia</option>
+                                <option>Cuba</option>
+                                <option>Cyprus</option>
+                                <option>Czech Republic</option>
+                                <option>Denmark</option>
+                                <option>Djibouti</option>
+                                <option>Dominica</option>
+                                <option>Dominican Republic</option>
+                                <option>DR Congo</option>
+                                <option>Ecuador</option>
+                                <option>Egypt</option>
+                                <option>El Salvador</option>
+                                <option>Equatorial Guinea</option>
+                                <option>Eritrea</option>
+                                <option>Estonia</option>
+                                <option>Eswatini</option>
+                                <option>Ethiopia</option>
+                                <option>Faeroe Islands</option>
+                                <option>Finland</option>
+                                <option>France</option>
+                                <option>French Guiana</option>
+                                <option>Gabon
+                                <option>Gambia</option>
+                                <option>Georgia</option>
+                                <option>Germany</option>
+                                <option>Ghana</option>
+                                <option>Gibraltar</option>
+                                <option>Greece</option>
+                                <option>Grenada</option>
+                                <option>Guatemala</option>
+                                <option>Guinea</option>
+                                <option>Guinea-Bissau</option>
+                                <option>Guyana</option>
+                                <option>Haiti</option>
+                                <option>Holy See</option>
+                                <option>Honduras</option>
+                                <option>Hong Kong</option>
+                                <option>Hungary</option>
+                                <option>Iceland</option>
+                                <option>India</option>
+                                <option>Indonesia</option>
+                                <option>Iran</option>
+                                <option>Iraq</option>
+                                <option>Ireland</option>
+                                <option>Isle of Man</option>
+                                <option>Israel</option>
+                                <option>Italy</option>
+                                <option>Jamaica</option>
+                                <option>Japan</option>
+                                <option>Jordan</option>
+                                <option>Kazakhstan</option>
+                                <option>Kenya</option>
+                                <option>Kuwait</option>
+                                <option>Kyrgyzstan</option>
+                                <option>Laos</option>
+                                <option>Latvia</option>
+                                <option>Lebanon</option>
+                                <option>Lesotho</option>
+                                <option>Liberia</option>
+                                <option>Libya</option>
+                                <option>Liechtenstein</option>
+                                <option>Monaco</option>
+                                <option>Moldova</option>
+                                <option>Mexico</option>
+                                <option>Mayotte</option>
+                                <option>Mauritius</option>
+                                <option>Mauritania</option>
+                                <option>Malta</option>
+                                <option>Mali</option>
+                                <option>Maldives</option>
+                                <option>Malaysia</option>
+                                <option>Malawi</option>
+                                <option>Madagascar</option>
+                                <option>Macao</option>
+                                <option>Luxembourg</option>
+                                <option>Lithuania</option>
+                                <option>Réunion</option>
+                                <option>Qatar</option>
+                                <option>Portugal</option>
+                                <option>Poland</option>
+                                <option>Philippines</option>
+                                <option>Peru</option>
+                                <option>Paraguay</option>
+                                <option>Panama</option>
+                                <option>Palestine</option>
+                                <option>Pakistan</option>
+                                <option>Oman</option>
+                                <option>Norway</option>
+                                <option>North Macedonia</option>
+                                <option>North Korea</option>
+                                <option>Nigeria</option>
+                                <option>Niger</option>
+                                <option>Nicaragua</option>
+                                <option>Netherlands</option>
+                                <option>Nepal</option>
+                                <option>Namibia</option>
+                                <option>Myanmar</option>
+                                <option>Mozambique</option>
+                                <option>Morocco</option>
+                                <option>Montenegro</option>
+                                <option>Mongolia</option>
+                                <option>Senegal</option>
+                                <option>Saudi Arabia</option>
+                                <option>Sao Tome & Principe</option>
+                                <option>San Marino</option>
+                                <option>Saint Vincent and the Grenadines</option>
+                                <option>Saint Lucia</option>
+                                <option>Saint Kitts and Nevis</option>
+                                <option>Saint Helena</option>
+                                <option>Rwanda</option>
+                                <option>Russia</option>
+                                <option>Romania</option>
+                                <option>Sudan</option>
+                                <option>State of Palestine</option>
+                                <option> Sri Lanka</option>
+                                <option>Spain</option>
+                                <option>South Sudan</option>
+                                <option>South Korea</option>
+                                <option>South Africa</option>
+                                <option>Somalia</option>
+                                <option>Slovenia</option>
+                                <option>Slovakia</option>
+                                <option>Singapore</option>
+                                <option>Sierra Leone</option>
+                                <option>Seychelles</option>
+                                <option>Serbia</option>
+                                <option>Timor-Leste</option>
+                                <option>The Bahamas</option>
+                                <option>Thailand</option>
+                                <option>Tanzania</option>
+                                <option>Tajikistan</option>
+                                <option>Taiwan</option>
+                                <option>Syria</option>
+                                <option>Switzerland</option>
+                                <option>Sweden</option>
+                                <option>Suriname</option>
+                                <option>Togo</option>
+                                <option>Trinidad and Tobago</option>
+                                <option>Tunisia</option>
+                                <option>Turkey</option>
+                                <option>Turkmenistan</option>
+                                <option>Uganda</option>
+                                <option>Ukraine</option>
+                                <option>United Arab Emirates</option>
+                                <option>United Kingdom</option>
+                                <option>United States</option>
+                                <option>Uruguay</option>
+                                <option>Uzbekistan</option>
+                                <option>Venezuela</option>
+                                <option>Vietnam</option>
+                                <option>Western Sahara</option>
+                                <option>Yemen</option>
+                                <option>Zambia</option>
+                                <option>Zimbabwe</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="w-100 inputParent">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Passport Number</label>
+                        <input type="number" class="form-control" id="passNum">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Issued Date Of Passport</label>
+                        <input type="date" class="form-control" id="datePass">
+                    </div>
+                </div>
+                <div class="w-100 inputParent">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Expired Date Of Passport</label>
+                        <input type="date" class="form-control" id="exPass">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">City of departure (traveling to Baku from
+                            which city)</label>
+                        <input type="text" class="form-control" id="city">
+                    </div>
+
+                </div>
+                <div class="w-100 inputParent">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+                        <input type="number" class="form-control" id="mobile">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="eaddress">
+                    </div>
+                </div>
+                <div class="w-100 inputParent">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Dietary Requirements</label>
+                        <input type="text" class="form-control" id="dietary">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">T-Shirt Size</label>
+                        <select onclick="showSizesPopup()" class="form-control" id="size">
+                            <option selected></option>
+                            <option>s</option>
+                            <option>m</option>
+                            <option>l</option>
+                            <option>xl</option>
+                            <option>xxl</option>
+                            <option>xxxl</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="w-100 inputParent">
+                    <div class="mb-3 form-check dflex">
+                        <label for="exampleInputEmail1" class="form-check-label bold">Gender:</label>
+                        <div class="custClass">
+                            <label for="exampleInputEmail1" class="form-check-label">Male</label>
+                            <input type="radio" class="form-check-input" id="male" name="gender" value="male">
+                        </div>
+                        <div class="custClass">
+                            <label for="exampleInputEmail1" class="form-check-label">Female</label>
+                            <input type="radio" class="form-check-input" id="female" name="gender" value="female">
+                        </div>
+                    </div>
+                    <div class="mb-3 form-check dflex">
+                        <label for="exampleInputEmail1" class="form-check-label bold">Alcohol Requirement:</label>
+                        <div class="custClass">
+                            <label for="exampleInputEmail1" class="form-check-label">Yes</label>
+                            <input type="radio" class="form-check-input" id="yes" name="alcohol" value="yes">
+                        </div>
+                        <div class="custClass">
+                            <label for="exampleInputEmail1" class="form-check-label">No</label>
+                            <input type="radio" class="form-check-input" id="no" name="alcohol" value="no">
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100 inputParent">
+                    <div class="mb-3 form-check dflex">
+                        <label for="exampleInputEmail1" class="form-check-label bold">Food Preference:</label>
+                        <div class="custClass">
+                            <label for="exampleInputEmail1" class="form-check-label">VEG</label>
+                            <input type="radio" class="form-check-input" id="veg" name="food" value="veg">
+                        </div>
+                        <div class="custClass">
+                            <label for="exampleInputEmail1" class="form-check-label">NonVEG</label>
+                            <input type="radio" class="form-check-input" id="nonveg" name="food" value="nonveg">
+                        </div>
+                    </div>
+                    <div class="mb-3 form-check dflex">
+                        <label for="exampleInputEmail1" class="form-check-label bold">Spouse:</label>
+                        <div class="custClass">
+                            <label for="exampleInputEmail1" class="form-check-label">Yes</label>
+                            <input oninput="showFemale()" type="radio" class="form-check-input" id="spouseYes"
+                                name="spouse" value="true">
+                        </div>
+                        <div class="custClass">
+                            <label for="exampleInputEmail1" class="form-check-label">No</label>
+                            <input oninput="hideFemale()" type="radio" class="form-check-input" id="spouseNo"
+                                name="spouse" value="false">
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="w-100 inputParent justify-content-start upload">
+                    <label for="uploadInput" id="placeholderLabel">Upload Passport Image</label>
+                    <input accept="image/jpg" id="imageInput" type="file" onclick="showPhoto()" oninput="uploadPhoto()"
+                        name="Upload Passport Image">
+                </div>
+                <!-- Femaleeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee -->
+                <div id="showFemale" class="w-120 showFemale">
+                    <div class="w-100 inputParent">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="ffname">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Middle Name</label>
+                            <input type="email" class="form-control" id="fmname">
+                        </div>
+                    </div>
+                    <div class="w-100 inputParent">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                            <input type="email" class="form-control" id="flname">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Date Of Birth</label>
+                            <input type="date" class="form-control" id="fdobirth">
+                        </div>
+                    </div>
+                    <div class="w-100 inputParent">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Nationality</label>
+                            <input type="text" class="form-control" id="fnationality">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Country Of Residence</label>
+                            <select type="text" class="form-control" id="fcountry">
+                                <option>Afghanistan</option>
+                                <option>Albania</option>
+                                <option>Algeria</option>
+                                <option>Andorra</option>
+                                <option>Angola</option>
+                                <option>Antigua and Barbuda</option>
+                                <option>Argentina</option>
+                                <option>Armenia</option>
+                                <option>Austria</option>
+                                <option>Azerbaijan</option>
+                                <option>Bahrain</option>
+                                <option>Bangladesh</option>
+                                <option>Barbados</option>
+                                <option>Belarus</option>
+                                <option>Belgium</option>
+                                <option>Belize</option>
+                                <option>Benin</option>
+                                <option>Bhutan</option>
+                                <option>Bolivia</option>
+                                <option>Bosnia and Herzegovina</option>
+                                <option>Botswana</option>
+                                <option>Brazi</option>l
+                                <option>Brunei</option>
+                                <option>Bulgaria</option>
+                                <option>Burkina Faso</option>
+                                <option>Burundi</option>
+                                <option>Cabo Verde</option>
+                                <option>Cambodia</option>
+                                <option>Cameroon</option>
+                                <option>Canada</option>
+                                <option>Central African Republic</option>
+                                <option>Chad</option>
+                                <option>Channel Islands</option>
+                                <option>Chile</option>
+                                <option>China</option>
+                                <option>Colombia</option>
+                                <option>Comoros</option>
+                                <option>Congo</option>
+                                <option>Costa Rica</option>
+                                <option>Côte d'Ivoire</option>
+                                <option>Croatia</option>
+                                <option>Cuba</option>
+                                <option>Cyprus</option>
+                                <option>Czech Republic</option>
+                                <option>Denmark</option>
+                                <option>Djibouti</option>
+                                <option>Dominica</option>
+                                <option>Dominican Republic</option>
+                                <option>DR Congo</option>
+                                <option>Ecuador</option>
+                                <option>Egypt</option>
+                                <option>El Salvador</option>
+                                <option>Equatorial Guinea</option>
+                                <option>Eritrea</option>
+                                <option>Estonia</option>
+                                <option>Eswatini</option>
+                                <option>Ethiopia</option>
+                                <option>Faeroe Islands</option>
+                                <option>Finland</option>
+                                <option>France</option>
+                                <option>French Guiana</option>
+                                <option>Gabon
+                                <option>Gambia</option>
+                                <option>Georgia</option>
+                                <option>Germany</option>
+                                <option>Ghana</option>
+                                <option>Gibraltar</option>
+                                <option>Greece</option>
+                                <option>Grenada</option>
+                                <option>Guatemala</option>
+                                <option>Guinea</option>
+                                <option>Guinea-Bissau</option>
+                                <option>Guyana</option>
+                                <option>Haiti</option>
+                                <option>Holy See</option>
+                                <option>Honduras</option>
+                                <option>Hong Kong</option>
+                                <option>Hungary</option>
+                                <option>Iceland</option>
+                                <option>India</option>
+                                <option>Indonesia</option>
+                                <option>Iran</option>
+                                <option>Iraq</option>
+                                <option>Ireland</option>
+                                <option>Isle of Man</option>
+                                <option>Israel</option>
+                                <option>Italy</option>
+                                <option>Jamaica</option>
+                                <option>Japan</option>
+                                <option>Jordan</option>
+                                <option>Kazakhstan</option>
+                                <option>Kenya</option>
+                                <option>Kuwait</option>
+                                <option>Kyrgyzstan</option>
+                                <option>Laos</option>
+                                <option>Latvia</option>
+                                <option>Lebanon</option>
+                                <option>Lesotho</option>
+                                <option>Liberia</option>
+                                <option>Libya</option>
+                                <option>Liechtenstein</option>
+                                <option>Monaco</option>
+                                <option>Moldova</option>
+                                <option>Mexico</option>
+                                <option>Mayotte</option>
+                                <option>Mauritius</option>
+                                <option>Mauritania</option>
+                                <option>Malta</option>
+                                <option>Mali</option>
+                                <option>Maldives</option>
+                                <option>Malaysia</option>
+                                <option>Malawi</option>
+                                <option>Madagascar</option>
+                                <option>Macao</option>
+                                <option>Luxembourg</option>
+                                <option>Lithuania</option>
+                                <option>Réunion</option>
+                                <option>Qatar</option>
+                                <option>Portugal</option>
+                                <option>Poland</option>
+                                <option>Philippines</option>
+                                <option>Peru</option>
+                                <option>Paraguay</option>
+                                <option>Panama</option>
+                                <option>Palestine</option>
+                                <option>Pakistan</option>
+                                <option>Oman</option>
+                                <option>Norway</option>
+                                <option>North Macedonia</option>
+                                <option>North Korea</option>
+                                <option>Nigeria</option>
+                                <option>Niger</option>
+                                <option>Nicaragua</option>
+                                <option>Netherlands</option>
+                                <option>Nepal</option>
+                                <option>Namibia</option>
+                                <option>Myanmar</option>
+                                <option>Mozambique</option>
+                                <option>Morocco</option>
+                                <option>Montenegro</option>
+                                <option>Mongolia</option>
+                                <option>Senegal</option>
+                                <option>Saudi Arabia</option>
+                                <option>Sao Tome & Principe</option>
+                                <option>San Marino</option>
+                                <option>Saint Vincent and the Grenadines</option>
+                                <option>Saint Lucia</option>
+                                <option>Saint Kitts and Nevis</option>
+                                <option>Saint Helena</option>
+                                <option>Rwanda</option>
+                                <option>Russia</option>
+                                <option>Romania</option>
+                                <option>Sudan</option>
+                                <option>State of Palestine</option>
+                                <option> Sri Lanka</option>
+                                <option>Spain</option>
+                                <option>South Sudan</option>
+                                <option>South Korea</option>
+                                <option>South Africa</option>
+                                <option>Somalia</option>
+                                <option>Slovenia</option>
+                                <option>Slovakia</option>
+                                <option>Singapore</option>
+                                <option>Sierra Leone</option>
+                                <option>Seychelles</option>
+                                <option>Serbia</option>
+                                <option>Timor-Leste</option>
+                                <option>The Bahamas</option>
+                                <option>Thailand</option>
+                                <option>Tanzania</option>
+                                <option>Tajikistan</option>
+                                <option>Taiwan</option>
+                                <option>Syria</option>
+                                <option>Switzerland</option>
+                                <option>Sweden</option>
+                                <option>Suriname</option>
+                                <option>Togo</option>
+                                <option>Trinidad and Tobago</option>
+                                <option>Tunisia</option>
+                                <option>Turkey</option>
+                                <option>Turkmenistan</option>
+                                <option>Uganda</option>
+                                <option>Ukraine</option>
+                                <option>United Arab Emirates</option>
+                                <option>United Kingdom</option>
+                                <option>United States</option>
+                                <option>Uruguay</option>
+                                <option>Uzbekistan</option>
+                                <option>Venezuela</option>
+                                <option>Vietnam</option>
+                                <option>Western Sahara</option>
+                                <option>Yemen</option>
+                                <option>Zambia</option>
+                                <option>Zimbabwe</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="w-100 inputParent">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Passport Number</label>
+                            <input type="date" class="form-control" id="fpassNum">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Issued Date Of Passport</label>
+                            <input type="date" class="form-control" id="fdatePass">
+                        </div>
+                    </div>
+                    <div class="w-100 inputParent">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Expired Date Of Passport</label>
+                            <input type="date" class="form-control" id="fexPass">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">City of departure (traveling to Baku from
+                                which city)</label>
+                            <input type="text" class="form-control" id="fcity">
+                        </div>
+                       
+                    </div>
+                    <div class="w-100 inputParent">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Mobile Number</label>
+                            <input type="number" class="form-control" id="fmobile">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                            <input type="text" class="form-control" id="feaddress">
+                        </div>
+                    </div>
+                    <div class="w-100 inputParent">
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Dietary Requirements</label>
+                            <input type="text" class="form-control" id="fdietary">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">T-Shirt Size</label>
+                            <select class="form-control" name="" id="fsize">
+                                <option selected></option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>XL</option>
+                                <option>XXL</option>
+                                <option>XXXL</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="w-100 inputParent">
+                       
+                        <div class="mb-3 form-check dflex">
+                            <label for="exampleInputEmail1" class="form-check-label bold">Gender:</label>
+                            <div class="">
+                                <input type="radio" class="form-check-input" id="fmale" name="fgender" value="male">
+                                <label for="exampleInputEmail1" class="form-check-label">Male</label>
+                            </div>
+                            <div class="">
+                                <input type="radio" class="form-check-input" id="ffemale" name="fgender" value="female">
+                                <label for="exampleInputEmail1" class="form-check-label">Female</label>
+                            </div>
+                        </div>
+                        <div class="mb-3 form-check dflex">
+                            <label for="exampleInputEmail1" class="form-check-label bold">Alcohol Requirement:</label>
+                            <div class="">
+                                <input type="radio" class="form-check-input" id="fyes" name="falcohol" value="yes">
+                                <label for="exampleInputEmail1" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="">
+                                <input type="radio" class="form-check-input" id="fno" name="falcohol" value="no">
+                                <label for="exampleInputEmail1" class="form-check-label">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-100 inputParent">
+                        <div class="mb-3 form-check dflex">
+                            <label for="exampleInputEmail1" class="form-check-label bold">Food Preference:</label>
+                            <div class="">
+                                <input type="radio" class="form-check-input" id="fveg" name="ffood" value="veg">
+                                <label for="exampleInputEmail1" class="form-check-label">VEG</label>
+                            </div>
+                            <div class="">
+                                <input type="radio" class="form-check-input" id="fnonveg" name="ffood" value="nonveg">
+                                <label for="exampleInputEmail1" class="form-check-label">NonVEG</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="w-100 inputParent">
+                        <label for="uploadInput" id="placeholderLabel">Upload Passport Image</label>
+                        <input accept="image/jpg" id="fimageInput" type="file" onclick="showPhoto()" oninput="uploadFPhoto()"
+                            name="Upload Passport Image">
+                    </div>
+                </div>
+
+
+                <button id="regSubmitBtn" type="button" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+    <script src="./assets/js/fileSaver.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
